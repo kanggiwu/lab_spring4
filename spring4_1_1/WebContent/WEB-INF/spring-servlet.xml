@@ -2,6 +2,33 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
+	<bean id="default-handler-mapping" 
+	class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+	<bean name ="/di/hello.sp4" class="kosmo80.mvc.sp4.HelloController"/>
+	<bean id ="emp-controller" class="kosmo80.mvc.sp4.EmpController"/>
+	<bean id ="url-mapping" 
+	class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/di/getEmpList.jsp">emp-controller</prop>
+				<prop key="/di/empInsert.jsp">emp-controller</prop>
+				<prop key="/di/empUpdate.jsp">emp-controller</prop>
+				<prop key="/di/empDelete.jsp">emp-controller</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="emp-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name ="mappings">
+			<props>
+				<prop key="/di/getEmpList.jsp">getEmpList</prop>
+				<prop key="/di/empInsert.jsp">getEmpInsert</prop>
+				<prop key="/di/empUpdate.jsp">getEmpUpdate</prop>
+				<prop key="/di/empDelete.jsp">getEmpDelete</prop>
+			</props>
+		</property>
+	</bean>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name = "prefix" value="/WEB-INF/views/"/>
+		<property name = "suffix" value=".jsp"/>
+	</bean>
 </beans>

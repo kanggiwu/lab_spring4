@@ -15,7 +15,7 @@ public class Sonata {
 	public Sonata(String carColor, int wheelNum, int speed) {
 		this.carColor = carColor;
 		this.wheelNum = wheelNum;
-		this.speed = speed;
+		this.speed = speed;.....................
 	}
 	@Override
 	public String toString() {

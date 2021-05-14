@@ -2,9 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 톰캣은 디폴트가 30분 -->
 	<bean id = "myCar" class = "local.di.Sonata" scope = "prototype"/>
 	<bean id = "yourCar" class = "local.di.Sonata" scope = "singleton">
 		<constructor-arg index="0" type="java.lang.String" value="검정색"/>
+		<constructor-arg index="1" type="int" value="4"/>
+	</bean>
+	<bean id = "herCar" class = "local.di.Sonata" scope = "session">
+		<constructor-arg index="0" type="java.lang.String" value="바다색"/>
 		<constructor-arg index="1" type="int" value="4"/>
 	</bean>
 	<bean id = "himCar" class = "local.di.Sonata" scope = "request">

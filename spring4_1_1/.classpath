@@ -13,5 +13,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/workspace_java80/spring-core-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java80/spring-beans-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java80/spring-context-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java80/spring-webmvc-4.3.30.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
